@@ -6,6 +6,7 @@ import os
 from langchain.embeddings import OpenAIEmbeddings
 from langchain.vectorstores import FAISS as LC_FAISS
 from langchain.text_splitter import RecursiveCharacterTextSplitter
+import requests
 
 # --- CONFIGURAÇÕES INICIAIS ---
 # Insira sua API key do OpenAI
@@ -16,23 +17,31 @@ openai.api_key = st.secrets['OPENAI-APIKEY']
 clientFA = openai
 
 # Lista de arquivos de texto
+def ler_texto_github(url):
+    response = requests.get(url)
+    if response.status_code == 200:
+        return response.text
+    else:
+        return f"Erro ao carregar {url}"
 # Atualize os caminhos conforme sua estrutura local
-lista_arquivos = [
-    r"\Textos\1.txt",
-    r"\Textos\2.txt",
-    r"\Textos\3.txt",
-    r"\Textos\4.txt",
-    r"\Textos\5.txt",
-    r"\Textos\6.txt",
-    r"\Textos\7.txt",
-    r"\Textos\8.txt",
-    r"\Textos\9.txt",
-    r"\Textos\10.txt",
-    r"\Textos\11.txt",
-    r"\Textos\12.txt",
-    r"\Textos\13.txt",
-    r"\Textos\Faça A Sua Pergunta.txt"
+lista_urls = [
+    "https://raw.githubusercontent.com/Gabriel4210/PersonaFA/refs/heads/main/Textos/1.txt",
+    "https://raw.githubusercontent.com/Gabriel4210/PersonaFA/refs/heads/main/Textos/2.txt",
+    "https://raw.githubusercontent.com/Gabriel4210/PersonaFA/refs/heads/main/Textos/3.txt",
+    "https://raw.githubusercontent.com/Gabriel4210/PersonaFA/refs/heads/main/Textos/4.txt",
+    "https://raw.githubusercontent.com/Gabriel4210/PersonaFA/refs/heads/main/Textos/5.txt",
+    "https://raw.githubusercontent.com/Gabriel4210/PersonaFA/refs/heads/main/Textos/6.txt",
+    "https://raw.githubusercontent.com/Gabriel4210/PersonaFA/refs/heads/main/Textos/7.txt",
+    "https://raw.githubusercontent.com/Gabriel4210/PersonaFA/refs/heads/main/Textos/8.txt",
+    "https://raw.githubusercontent.com/Gabriel4210/PersonaFA/refs/heads/main/Textos/9.txt",
+    "https://raw.githubusercontent.com/Gabriel4210/PersonaFA/refs/heads/main/Textos/10.txt",
+    "https://raw.githubusercontent.com/Gabriel4210/PersonaFA/refs/heads/main/Textos/11.txt",
+    "https://raw.githubusercontent.com/Gabriel4210/PersonaFA/refs/heads/main/Textos/12.txt",
+    "https://raw.githubusercontent.com/Gabriel4210/PersonaFA/refs/heads/main/Textos/13.txt",
+    "https://raw.githubusercontent.com/Gabriel4210/PersonaFA/refs/heads/main/Textos/Faça A Sua Pergunta.txt"
 ]
+
+lista_arquivos = [ler_texto_github(url) for url in lista_urls]
 
 # --- FUNÇÕES ---
 @st.cache_data(show_spinner=False)
