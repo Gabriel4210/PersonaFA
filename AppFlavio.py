@@ -18,20 +18,20 @@ clientFA = openai
 # Lista de arquivos de texto
 # Atualize os caminhos conforme sua estrutura local
 lista_arquivos = [
-    r"C:\Users\gabfr\OneDrive\Documentos\Aplicativo Streamlit\Textos\1.txt",
-    r"C:\Users\gabfr\OneDrive\Documentos\Aplicativo Streamlit\Textos\2.txt",
-    r"C:\Users\gabfr\OneDrive\Documentos\Aplicativo Streamlit\Textos\3.txt",
-    r"C:\Users\gabfr\OneDrive\Documentos\Aplicativo Streamlit\Textos\4.txt",
-    r"C:\Users\gabfr\OneDrive\Documentos\Aplicativo Streamlit\Textos\5.txt",
-    r"C:\Users\gabfr\OneDrive\Documentos\Aplicativo Streamlit\Textos\6.txt",
-    r"C:\Users\gabfr\OneDrive\Documentos\Aplicativo Streamlit\Textos\7.txt",
-    r"C:\Users\gabfr\OneDrive\Documentos\Aplicativo Streamlit\Textos\8.txt",
-    r"C:\Users\gabfr\OneDrive\Documentos\Aplicativo Streamlit\Textos\9.txt",
-    r"C:\Users\gabfr\OneDrive\Documentos\Aplicativo Streamlit\Textos\10.txt",
-    r"C:\Users\gabfr\OneDrive\Documentos\Aplicativo Streamlit\Textos\11.txt",
-    r"C:\Users\gabfr\OneDrive\Documentos\Aplicativo Streamlit\Textos\12.txt",
-    r"C:\Users\gabfr\OneDrive\Documentos\Aplicativo Streamlit\Textos\13.txt",
-    r"C:\Users\gabfr\OneDrive\Documentos\Aplicativo Streamlit\Textos\Faça A Sua Pergunta.txt"
+    r"\Textos\1.txt",
+    r"\Textos\2.txt",
+    r"\Textos\3.txt",
+    r"\Textos\4.txt",
+    r"\Textos\5.txt",
+    r"\Textos\6.txt",
+    r"\Textos\7.txt",
+    r"\Textos\8.txt",
+    r"\Textos\9.txt",
+    r"\Textos\10.txt",
+    r"\Textos\11.txt",
+    r"\Textos\12.txt",
+    r"\Textos\13.txt",
+    r"\Textos\Faça A Sua Pergunta.txt"
 ]
 
 # --- FUNÇÕES ---
