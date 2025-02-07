@@ -17,31 +17,22 @@ openai.api_key = st.secrets['OPENAI-APIKEY']
 clientFA = openai
 
 # Lista de arquivos de texto
-def ler_texto_github(url):
-    response = requests.get(url)
-    if response.status_code == 200:
-        return response.text
-    else:
-        return f"Erro ao carregar {url}"
-# Atualize os caminhos conforme sua estrutura local
-lista_urls = [
-    "https://raw.githubusercontent.com/Gabriel4210/PersonaFA/refs/heads/main/Textos/1.txt",
-    "https://raw.githubusercontent.com/Gabriel4210/PersonaFA/refs/heads/main/Textos/2.txt",
-    "https://raw.githubusercontent.com/Gabriel4210/PersonaFA/refs/heads/main/Textos/3.txt",
-    "https://raw.githubusercontent.com/Gabriel4210/PersonaFA/refs/heads/main/Textos/4.txt",
-    "https://raw.githubusercontent.com/Gabriel4210/PersonaFA/refs/heads/main/Textos/5.txt",
-    "https://raw.githubusercontent.com/Gabriel4210/PersonaFA/refs/heads/main/Textos/6.txt",
-    "https://raw.githubusercontent.com/Gabriel4210/PersonaFA/refs/heads/main/Textos/7.txt",
-    "https://raw.githubusercontent.com/Gabriel4210/PersonaFA/refs/heads/main/Textos/8.txt",
-    "https://raw.githubusercontent.com/Gabriel4210/PersonaFA/refs/heads/main/Textos/9.txt",
-    "https://raw.githubusercontent.com/Gabriel4210/PersonaFA/refs/heads/main/Textos/10.txt",
-    "https://raw.githubusercontent.com/Gabriel4210/PersonaFA/refs/heads/main/Textos/11.txt",
-    "https://raw.githubusercontent.com/Gabriel4210/PersonaFA/refs/heads/main/Textos/12.txt",
-    "https://raw.githubusercontent.com/Gabriel4210/PersonaFA/refs/heads/main/Textos/13.txt",
-    "https://raw.githubusercontent.com/Gabriel4210/PersonaFA/refs/heads/main/Textos/Faça A Sua Pergunta.txt"
+lista_arquivos = [
+    "Textos/1.txt",
+    "Textos/2.txt",
+    "Textos/3.txt",
+    "Textos/4.txt",
+    "Textos/5.txt",
+    "Textos/6.txt",
+    "Textos/7.txt",
+    "Textos/8.txt",
+    "Textos/9.txt",
+    "Textos/10.txt",
+    "Textos/11.txt",
+    "Textos/12.txt",
+    "Textos/13.txt",
+    "Textos/Faça A Sua Pergunta.txt"
 ]
-
-lista_arquivos = [ler_texto_github(url) for url in lista_urls]
 
 # --- FUNÇÕES ---
 @st.cache_data(show_spinner=False)
