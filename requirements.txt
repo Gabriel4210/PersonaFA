@@ -1,6 +1,6 @@
 streamlit == 1.42.0
 openai == 1.61.1
-faiss == 1.10.0
+faiss-cpu==1.7.3
 numpy == 1.26.4
 langchain == 0.3.17
 langchain.text_splitter == 0.3.6
